@@ -1,0 +1,121 @@
+{
+  "settings": {
+    "name": "Site-09-23_1648-clone",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "handymanamp",
+      "title": "HandymanAMP",
+      "styling": {
+        "primaryColor": "#fde21c",
+        "secondaryColor": "#012f5b",
+        "successColor": "#506df5",
+        "infoColor": "#fd830f",
+        "warningColor": "#0a193b",
+        "dangerColor": "#000000",
+        "mainFont": "Roboto",
+        "display1Font": "Montserrat",
+        "display1Size": 5,
+        "display2Font": "Montserrat",
+        "display2Size": 2.4,
+        "display3Font": "Montserrat",
+        "display3Size": 1.4,
+        "display4Font": "Roboto",
+        "display4Size": 1.2,
+        "display5Font": "Roboto",
+        "display5Size": 1,
+        "display6Font": "Roboto",
+        "display6Size": 0.8,
+        "isRoundedButtons": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "4.8.2",
+    "siteFonts": [],
+    "uniqCompNum": 1,
+    "versionPublish": "4.8.2"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "<script type=\"text/javascript\" src=\"https://buildertrend.net/leads/contactforms/js/btClientContactForm.js\"></script>",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            "label.input-label": {
+              "display": "flex",
+              "flex-direction": "column",
+              "padding": ".75rem .5rem",
+              "margin": "0",
+              "width": "33%"
+            },
+            "label.area": {
+              "padding": ".75rem .5rem",
+              "width": "100%",
+              "margin": "0"
+            },
+            "input": {
+              "font": "inherit"
+            },
+            "textarea": {
+              "width": "100%",
+              "max-width": "100%",
+              "font": "inherit"
+            },
+            ".mbr-section-subtitle": {
+              "color": "#ffffff"
+            },
+            ".btn": {
+              "margin-top": "2rem"
+            },
+            ".mbr-figure": {
+              "margin-bottom": "1rem",
+              "width": "~\"@{mediaSize}%\"",
+              "margin-right": "auto",
+              "margin-left": "auto"
+            },
+            "@media (max-width: 991px)": {
+              "label.input-label": {
+                "width": "100%"
+              }
+            },
+            "H2": {
+              "color": "#ffffff"
+            }
+          },
+          "_name": "header2",
+          "_customHTML": "<section class=\"form2\" group=\"Forms\" plugins=\"amp-main, amp-form, amp-mustache\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n        \n        <input type=\"range\" inline=\"\" title=\"Logo Size\" name=\"mediaSize\" min=\"20\" max=\"80\" step=\"5\" value=\"60\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"9\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"9\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Show Message Box\" name=\"showMessage\">\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/istock-504224016-2000x1112.jpg\" selected=\"\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\"> \n        </fieldset>\n\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" checked=\"\" condition=\"bg.type !== 'color'\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\"></div>\n    <div class=\"container\">\n        \n             <div class=\"mbr-figure\">\n                    <amp-img src=\"@PROJECT_PATH@/assets/images/logo.png\" width=\"665.009375\" height=\"241\" alt=\"Mobirise\" class=\"mobirise-loader\" layout=\"responsive\">\n                        <div placeholder=\"\">\n                            <div class=\"mobirise-spinner\">\n                                <em></em>\n                                <em></em>\n                                <em></em>\n                            </div>\n                        </div>\n                        <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/logo.png\" alt=\"Mobirise\" title=\"\">\n                    </amp-img>\n                    <div mbr-text=\"\" mbr-theme-style=\"display-4\" class=\"mbr-fonts-style img-subtitle align-center\" data-app-selector=\".img-subtitle\" mbr-if=\"imageSubtitle\">Lorem Ipsum</div>\n                </div>\n        \n        <h2 mbr-if=\"showTitle\" class=\"align-center mbr-fonts-style\" mbr-theme-style=\"display-2\">\n            Request for consultation\n        </h2>\n        <h3 mbr-if=\"showSubtitle\" class=\"mbr-section-subtitle align-center mbr-fonts-style\" mbr-theme-style=\"display-3\" data-app-selector=\".mbr-section-subtitle\">How much is your home worth?</h3>\n\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div mbr-form=\"\" class=\"mbr-col-sm-12 mbr-col-md-10 mbr-col-lg-8\">\n                <form class=\"mbr-form\" action=\"gustav.emil.fors@gmail.com\" method=\"post\" name=\"Mobirise Form\" target=\"_top\" novalidate=\"\">\n                    <div submit-success=\"\">\n                        <template data-form-alert=\"\" type=\"amp-mustache\">Subscription successful!</template>\n                    </div>\n                    <div submit-error=\"\">\n                        <template data-form-alert=\"\" type=\"amp-mustache\">Subscription successful!</template>\n                    </div>\n                    <div class=\"fieldset\">\n                        <label class=\"input-label\">\n                            <input type=\"hidden\" name=\"form[data][1][0]\" value=\"Name\">\n                            <input type=\"text\" name=\"form[data][1][1]\" data-form-field=\"Name\" placeholder=\"Name*\" required=\"\">\n                        </label>\n                        <label class=\"input-label\">\n                            <input type=\"hidden\" name=\"form[data][0][0]\" value=\"Email\">\n                            <input type=\"email\" name=\"form[data][0][1]\" data-form-field=\"Email\" placeholder=\"Email*\" required=\"\">\n                        </label>\n                        <label class=\"input-label\">\n                            <input type=\"hidden\" name=\"form[data][2][0]\" value=\"Phone\">\n                            <input type=\"phone\" name=\"form[data][2][1]\" data-form-field=\"Phone\" placeholder=\"Phone\">\n                        </label>\n                        <label class=\"area\" mbr-if=\"showMessage\">\n                            <input type=\"hidden\" name=\"form[data][3][0]\" value=\"Message\">\n                            <textarea name=\"form[data][3][1]\" rows=\"7\" data-form-field=\"Message\" placeholder=\"Message\"></textarea>\n                        </label>\n                        <span mbr-buttons=\"\" mbr-theme-style=\"display-4\" data-toolbar=\"-mbrLink,-mbrBtnAdd,-mbrBtnMove\" class=\"input-group-btn\"><a type=\"submit\" class=\"btn btn-form btn-primary\" data-app-placeholder=\"Type Text\">Get a Personalized Report</a></span>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_anchor": "header2-0",
+          "_isUserblock": true,
+          "_sourceTheme": "handymanamp",
+          "_cid": "r4tZD5UAwr",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
